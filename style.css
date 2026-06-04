@@ -793,7 +793,27 @@ h1, h2, h3 {
 /* ==========================================================================
    AJUSTES ULTRA-RESPONSIVOS (FORÇADO PARA TELAS PEQUENAS)
    ========================================================================== */
-@media screen and (max-width: 480px) {
+@media screen and (max-width: 768px) {
+    * {
+        max-width: 100% !important;
+        box-sizing: border-box !important;
+    }
+
+    /* Ajuste para o Jogo da Velha caber em celulares muito pequenos */
+    .tic-tac-toe-board {
+        width: 280px !important;
+        height: 280px !important;
+        grid-template-columns: repeat(3, 90px) !important;
+        grid-template-rows: repeat(3, 90px) !important;
+        gap: 5px !important;
+        margin: 0 auto 20px !important;
+    }
+    
+    .cell {
+        width: 90px !important;
+        height: 90px !important;
+        font-size: 2rem !important;
+    }
     
     /* Garante que nada vai vazar para os lados na tela do celular */
     html, body {
