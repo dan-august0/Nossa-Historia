@@ -791,66 +791,85 @@ h1, h2, h3 {
 }
 
 /* ==========================================================================
-   AJUSTES EXCLUSIVOS PARA CELULAR (RESPONSIVIDADE COMPLETA)
+   AJUSTES ULTRA-RESPONSIVOS (FORÇADO PARA TELAS PEQUENAS)
    ========================================================================== */
-@media (max-width: 600px) {
+@media screen and (max-width: 480px) {
     
-    /* 1. Ajuste da Galeria de Fotos (Polaroids) para não ficarem gigantes */
+    /* Garante que nada vai vazar para os lados na tela do celular */
+    html, body {
+        overflow-x: hidden !important;
+        width: 100% !important;
+    }
+
+    .scrapbook-section {
+        padding: 40px 15px !important;
+    }
+
+    /* 1. Galeria de Fotos (Polaroids) Alinhadas e Controladas */
     .galeria-grid {
-        grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)) !important;
-        gap: 20px !important;
+        display: flex !important;
+        flex-direction: column !important;
+        align-items: center !important;
+        gap: 25px !important;
         padding: 10px !important;
     }
 
     .polaroid-card {
-        width: 100% !important;
-        max-width: 250px !important;
-        padding: 10px 10px 35px 10px !important; /* Diminui a borda branca inferior */
+        width: 85% !important;
+        max-width: 260px !important;
+        height: auto !important;
+        margin: 0 auto !important;
+        padding: 10px 10px 40px 10px !important;
     }
 
     .polaroid-card img {
-        height: 200px !important; /* Evita que a foto corte muito o rosto de vocês */
+        height: 220px !important;
+        object-fit: cover !important;
     }
 
-    /* 2. Correção do Contador (para não quebrar em duas linhas bagunçadas) */
+    /* 2. Reestruturação Completa do Contador */
     .countdown-container {
-        display: grid !important;
-        grid-template-columns: repeat(3, 1fr) !important; /* Cria 3 colunas iguais */
-        gap: 10px !important;
-        justify-content: center !important;
-        padding: 0 10px !important;
-    }
-
-    /* Alinha os dois últimos blocos (Dias e Horas) para centralizarem embaixo */
-    .countdown-container > :nth-child(4) {
-        grid-column: 1 / span 2;
-        justify-self: right;
-        margin-right: 15px;
-    }
-    
-    .countdown-container > :nth-child(5) {
-        grid-column: 2 / span 2;
-        justify-self: left;
-        margin-left: 15px;
-    }
-
-    .counter-box .digits {
-        font-size: 1.5rem !important; /* Letras ligeiramente menores para caber em qualquer celular */
-        padding: 8px 10px !important;
-        min-width: 60px !important;
-    }
-
-    /* 3. Correção dos Emojis Flutuantes / Títulos caindo */
-    .title-large, h1, h2, .base-date {
-        font-size: 2.2rem !important; /* Tamanho confortável para dedão e leitura */
         display: flex !important;
         flex-wrap: wrap !important;
         justify-content: center !important;
-        align-items: center !important;
-        gap: 5px !important;
+        gap: 10px !important;
+        width: 100% !important;
+        max-width: 320px !important;
+        margin: 15px auto !important;
     }
 
-    /* 4. Correção do Popup/Modal (Centralização Absoluta no Celular) */
+    .counter-box {
+        flex: 1 1 calc(33.33% - 10px) !important; /* Força 3 itens na primeira fileira */
+        min-width: 80px !important;
+    }
+
+    /* Força os dois últimos (Dias e Horas) a irem para baixo e ficarem lado a lado */
+    .countdown-container > :nth-child(4),
+    .countdown-container > :nth-child(5) {
+        flex: 0 1 45% !important;
+        margin-top: 5px !important;
+    }
+
+    .counter-box .digits {
+        font-size: 1.4rem !important;
+        padding: 6px 8px !important;
+        min-width: 55px !important;
+        letter-spacing: 1px !important;
+    }
+    
+    .counter-label {
+        font-size: 0.75rem !important;
+    }
+
+    /* 3. Ajuste de Textos e Emojis Grudados */
+    .title-large, h1, h2, .base-date {
+        font-size: 2rem !important;
+        text-align: center !important;
+        line-height: 1.3 !important;
+        display: block !important; /* Remove o flex do título para o emoji quebrar linha natural se faltar espaço */
+    }
+
+    /* 4. Popup/Modal Totalmente Centralizado na Tela */
     .modal {
         display: none; 
         position: fixed !important;
@@ -858,25 +877,33 @@ h1, h2, h3 {
         left: 0 !important;
         width: 100vw !important;
         height: 100vh !important;
-        padding: 15px !important;
+        background-color: rgba(0, 0, 0, 0.75) !important;
+        z-index: 99999 !important;
+        padding: 10px !important;
         box-sizing: border-box !important;
-        justify-content: center !important;
+        
+        /* Força o alinhamento no centro usando flex nativo no container */
         align-items: center !important;
+        justify-content: center !important;
     }
 
+    /* Sobrescreve margens ou posições absolutas que jogavam o popup para a direita */
     .modal-conteudo, .modal-content {
         position: relative !important;
-        margin: 0 auto !important; /* Zera margens externas tortas */
-        left: 0 !important;
-        right: 0 !important;
-        width: 95% !important; /* Ocupa quase toda a largura, deixando margem respirar */
-        max-width: 360px !important;
-        padding: 25px 20px !important;
+        top: unset !important;
+        left: unset !important;
+        right: unset !important;
+        bottom: unset !important;
+        margin: 0 auto !important; 
+        width: 92% !important;
+        max-width: 340px !important;
+        padding: 20px !important;
+        border-radius: 12px !important;
+        box-shadow: 0 10px 30px rgba(0,0,0,0.5) !important;
     }
-    
-    /* Ajusta o texto da mensagem no celular */
+
     #textoMemoria {
-        font-size: 1rem !important;
+        font-size: 0.95rem !important;
         line-height: 1.5 !important;
     }
 }
