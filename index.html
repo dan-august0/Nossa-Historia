@@ -1,0 +1,231 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Nossa História ❤️</title>
+    <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Caveat:wght@400;700&family=Poppins:wght@300;400;500;600&family=Reenie+Beanie&display=swap" rel="stylesheet">
+</head>
+<body>
+
+    <section id="page1" class="scrapbook-section kraft-bg pattern-overlay block-1">
+        <div class="container-grid">
+            
+            <div class="hero-side">
+                <div class="polaroid-wrapper tape-top">
+                    <div class="polaroid">
+                        <img src="img/capa.jpg" alt="Nossa Foto">
+                    </div>
+                </div>
+                <div class="scrapbook-title-box">
+                    <h1 class="font-handwritten">Nossa História <span class="heart-icon">❤️</span></h1>
+                    <p class="subtitle">algumas das minhas memórias favoritas têm você nelas.</p>
+                </div>
+                <button class="btn-primary btn-album" onclick="scrollParaSeacao('page2')">Abrir álbum 🤍</button>
+            </div>
+
+            <div class="story-side">
+                <div class="notebook-paper tape-pink">
+                    <h2 class="font-handwritten">Como tudo começou <span class="heart-icon">❤️</span></h2>
+                    <div class="notebook-content">
+                        <p>Engraçado pensar que antes de nos conhecermos já existiam duas histórias caminhando para se encontrar.</p>
+                        <p>Eu conheci você em uma festa de aniversário de uma amiga em comum.</p>
+                        <p>Entre conversas, risadas e aquele frio na barriga, aconteceu algo que eu nunca imaginaria.</p>
+                        <p class="highlight-date">No dia 07 de setembro de 2025 <span class="heart-icon">❤️</span> aconteceu nosso primeiro beijo.</p>
+                        <p>E foi ali que começou a nossa história.</p>
+                    </div>
+                </div>
+                
+                <div class="polaroid-wrapper pin-top-right">
+                    <div class="polaroid polaroid-vertical">
+                        <img src="img/infancia.jpg" alt="Foto antiga/Início">
+                    </div>
+                </div>
+            </div>
+
+        </div>
+        <button class="scroll-arrow" onclick="scrollParaSeacao('page2')" aria-label="Próxima página">↓</button>
+    </section>
+
+    <section id="page2" class="scrapbook-section kraft-bg pattern-overlay block-2">
+        <div class="section-header text-center">
+            <h2 class="font-handwritten title-large">Nossas memórias <span class="heart-icon">❤️</span></h2>
+        </div>
+
+        <div class="galeria-container">
+            <div class="galeria-grid">
+                <div class="polaroid-card dynamic-tilt-1" onclick="abrirMemoria(0)">
+                    <img src="img/memoria1.jpg" alt="Memória 1">
+                </div>
+                <div class="polaroid-card dynamic-tilt-3" onclick="abrirMemoria(2)">
+                    <img src="img/memoria10.gif" alt="Memória 3">
+                </div>
+                <div class="polaroid-card dynamic-tilt-2" onclick="abrirMemoria(1)">
+                    <img src="img/memoria2.jpg" alt="Memória 2">
+                </div>
+                <div class="polaroid-card dynamic-tilt-4" onclick="abrirMemoria(3)">
+                    <img src="img/memoria4.jpg" alt="Memória 4">
+                </div>
+                <div class="polaroid-card dynamic-tilt-1" onclick="abrirMemoria(4)">
+                    <img src="img/playlist.jpg" alt="Memória 5">
+                </div>
+                <div class="polaroid-card dynamic-tilt-2" onclick="abrirMemoria(5)">
+                    <img src="img/memoria6.jpg" alt="Memória 6">
+                </div>
+                <div class="polaroid-card dynamic-tilt-3" onclick="abrirMemoria(6)">
+                    <img src="img/memoria7.jpg" alt="Memória 7">
+                </div>
+                <div class="polaroid-card dynamic-tilt-4" onclick="abrirMemoria(7)">
+                    <img src="img/memoria9.gif" alt="Memória 8">
+                </div>
+            </div>
+            <p class="gallery-instruction font-handwritten">⤷ Clique em uma foto para ver a lembrança <span class="heart-icon">❤️</span></p>
+        </div>
+
+        <button class="scroll-arrow" onclick="scrollParaSeacao('page3')" aria-label="Próxima página">↓</button>
+    </section>
+
+    <section id="page3" class="scrapbook-section kraft-bg pattern-overlay block-3">
+        <div class="container-grid grid-split">
+            
+            <div class="playlist-side">
+                <div class="paper-torn-card">
+                    <h2 class="font-handwritten section-title">Nossa trilha sonora <span class="heart-icon">❤️</span></h2>
+                    
+                    <div class="polaroid-wrapper-small">
+                        <div class="polaroid">
+                            <img src="img/memoria5.jpg" alt="Foto Playlist">
+                        </div>
+                    </div>
+
+                    <div class="playlist-info">
+                        <p class="playlist-intro">Algumas músicas sempre vão me lembrar de você.</p>
+                        <h3 class="music-title font-handwritten">“Luther”</h3>
+                        <p class="music-author">Kendrick Lamar, SZA</p>
+                        <p class="music-description">ela fala sobre amor verdadeiro, sobre querer cuidar, proteger e escolher a mesma pessoa todos os dias. US de maisss 🎵</p>
+                    </div>
+
+                    <a href="https://open.spotify.com/playlist/1mNnrZr8rPctc6XZIX4Jcy?si=22131f0edf0e4fd5" target="_blank" class="btn-primary btn-spotify">
+                        <span class="icon-spotify"></span> Ouvir nossa playlist 🤍
+                    </a>
+                </div>
+            </div>
+
+            <div class="letter-side">
+                <div class="paper-letter">
+                    <h2 class="font-handwritten letter-title">Para você, meu Mor <span class="heart-icon">❤️</span></h2>
+                    
+                    <div class="letter-body">
+                        <p>É difícil colocar em palavras tudo que eu sinto, mas vou tentar...</p>
+                        <p>Você chegou como um detalhe e se tornou meu tudo. Obrigado por cada momento, por cada abraço, por cada risada, por cada conversa que me acalma e por existir exatamente como você é.</p>
+                        <p>Eu te escolho todos os dias e tenho certeza que quero continuar vivendo com você e constuindo nossa história.</p>
+                        <p class="letter-highlight">Feliz Dia dos Namorados!</p>
+                        <p>Eu te amo muito</p>
+                        <p class="letter-footer">Com todo meu amor,</p>
+                        <div class="signature-box">
+                            <span class="signature font-handwritten">Danillo Augusto</span>
+                        </div>
+                    </div>
+                    <div class="envelope-stamp"></div>
+                </div>
+            </div>
+
+        </div>
+        <button class="scroll-arrow" onclick="scrollParaSeacao('page4')" aria-label="Próxima página">↓</button>
+    </section>
+
+    <section id="page4" class="scrapbook-section kraft-bg pattern-overlay block-4">
+        <div class="sticker-note note-1 font-handwritten">"Você é minha pessoa favorita! 🤍"</div>
+        <div class="sticker-note note-2 font-handwritten">"Desde aquele primeiro beijo... 🥰"</div>
+        <div class="hand-drawn-heart hd-1">❤️</div>
+        <div class="hand-drawn-heart hd-2">💖</div>
+
+        <div class="counter-wrapper text-center">
+            <h2 class="font-handwritten title-large">Estamos juntos há <span class="heart-icon">❤️</span></h2>
+            
+            <div class="countdown-container">
+                <div class="counter-box">
+                    <div class="digits" id="box-anos">000</div>
+                    <span class="counter-label">anos</span>
+                </div>
+                <div class="counter-box">
+                    <div class="digits" id="box-meses">00</div>
+                    <span class="counter-label">meses</span>
+                </div>
+                <div class="counter-box">
+                    <div class="digits" id="box-semanas">00</div>
+                    <span class="counter-label">semanas</span>
+                </div>
+                <div class="counter-box">
+                    <div class="digits" id="box-dias">00</div>
+                    <span class="counter-label">dias</span>
+                </div>
+                <div class="counter-box">
+                    <div class="digits" id="box-horas">00</div>
+                    <span class="counter-label">horas</span>
+                </div>
+            </div>
+            <p class="base-date font-handwritten">desde 07 de fevereiro de 2026 <span class="heart-icon">❤️</span></p>
+        </div>
+
+        <button class="scroll-arrow" onclick="scrollParaSeacao('page5')">↓</button>
+    </section>
+
+    <section id="page5" class="scrapbook-section kraft-bg block-tic-tac">
+        <div class="game-container text-center">
+            <img src="img/dog.png" alt="Cachorrinho fofo" class="dog-sticker">
+            <h2 class="font-handwritten title-large">Desafio do Amor 🎯</h2>
+            <p class="game-subtitle">Ganhe o jogo para liberar sua recompensa especial!</p>
+            <p class="game-turn font-handwritten">Sua vez: Você joga com <span class="heart-icon">❤️</span></p>
+            
+            <div class="tic-tac-toe-board" id="board">
+                <div class="cell" data-index="0"></div>
+                <div class="cell" data-index="1"></div>
+                <div class="cell" data-index="2"></div>
+                <div class="cell" data-index="3"></div>
+                <div class="cell" data-index="4"></div>
+                <div class="cell" data-index="5"></div>
+                <div class="cell" data-index="6"></div>
+                <div class="cell" data-index="7"></div>
+                <div class="cell" data-index="8"></div>
+            </div>
+            
+            <button class="btn-primary" onclick="resetarJogo()">Reiniciar Jogo</button>
+            
+            <div id="reward-box" class="reward-card notebook-paper tape-pink hidden">
+                <h3 class="font-handwritten">🏆 Parabéns, meu amor!</h3>
+                <p>Você ganhou o jogo e desbloqueou seu prêmio:</p>
+                <p class="reward-text font-handwritten">"Vale uam carbonara feito por mim com direito a massagem rs e muitosss beijinhos!" 🎫✨</p>
+                <p style="font-size: 0.9rem; margin-top: 10px; color: #666;">(Tire um print para resgatar com o Danillo)</p>
+            </div>
+        </div>
+        <button class="scroll-arrow" onclick="scrollParaSeacao('page6')">↓</button>
+    </section>
+
+    <section id="page6" class="scrapbook-section kraft-bg block-bouquet">
+        <div class="bouquet-container text-center">
+            <h2 class="font-handwritten title-large">Um Buquê para Você 💐</h2>
+            
+            <div class="bouquet-wrapper-single">
+                <img src="img/bouquet.png" alt="Seu Buquê Especial" class="buque-imagem-montada">
+            </div>
+
+            <div class="surprise-wrapper">
+                <button class="btn-primary btn-love-final" onclick="chuvaCoracoes()">Eu te amo 🤍</button>
+                <p class="surprise-instruction font-handwritten">⤷ Clique para uma surpresa final!</p>
+            </div>
+        </div>
+    </section>
+
+    <div id="modal" class="modal" onclick="fecharModal()">
+        <div class="modal-conteudo" onclick="event.stopPropagation()">
+            <span class="fechar" onclick="fecharModal()">×</span>
+            <h2 id="tituloMemoria" class="font-handwritten"></h2>
+            <p id="textoMemoria"></p>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
